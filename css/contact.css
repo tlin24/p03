@@ -133,3 +133,15 @@ footer a {
   margin-left: 2rem;
   margin-bottom: 2rem;
 }
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2323ff;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}

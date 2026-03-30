@@ -201,16 +201,26 @@ main {
 .project-info h3 {
   grid-column: 1;
   grid-row: 2;
-
   font-family: "NeueMontreal", sans-serif;
   font-size: 2rem;
   color: #000;
   transform: translateY(-5px);
 }
 
+.project-info img {
+  width: 100%;           
+  max-width: 700px;      
+  max-height: 500px;          
+  object-fit: cover;
+  border: 2px solid #000000; 
+  border-radius: 12px;
+  align-self: flex-start;
+}
+
 .project-info p {
   font-family: "Simplon Mono", monospace;
   font-size: 0.95rem;
+  margin-top: 2rem;
   max-width: 700px;
   line-height: 1.6;
   color: #000000;
@@ -239,7 +249,7 @@ main {
 }
 
 .project-card:hover {
-  height: 260px; 
+  height: 725px; 
 }
 
 .project-card:hover .project-desc,
@@ -293,6 +303,18 @@ footer a {
   margin-top: 2rem;
   margin-left: 2rem;
   margin-bottom: 2rem;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2323ff;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 @media (max-width: 900px) {

@@ -21,6 +21,18 @@ body {
   background-color: #f5f5f5;
 }
 
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2323ff;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
 /*nav*/
 .navbar {
   display: flex;
