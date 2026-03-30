@@ -244,6 +244,35 @@ main {
   color: #2323ff;
 }
 
+footer hr {
+  border: none;
+  height: 1px;
+  background-color: black;
+  width: 100%;
+}
+
+footer p {
+  margin: 8px 0;
+  font-family: "Simplon Mono", monospace;
+  font-size: 1rem;
+  color: #000000;
+}
+
+footer a {
+  font-family: "Simplon Mono", monospace;
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 1rem;
+  color: #2323ff;
+  text-decoration: none;
+  position: relative;
+}
+
+.footer-cont {
+  margin-top: 2rem;
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+}
 
 @media (max-width: 900px) {
   .projects-preview {
