@@ -1,304 +1,291 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Page metadata and stylesheet links -->
-    <meta charset="utf-8" >
-    <title>P03 - Style Guide Template</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Style Guide | Terry Lin</title>
 
-    <link href="css/main.css" rel="stylesheet">
-    <link href="css/fonts.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/fonts.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="img/logo.png" />
   </head>
 
   <body>
-    <!-- Page header and navigation -->
-    <header>
-      <h1>P03 - Style Guide Template</h1>
 
-      <p>
-        A template you can use to start building out your own style guides with.
-      </p>
-
-      <nav>
-        <a href="#interactive_elements">Interactive Elements</a>
-        <a href="#text_elements">Text Elements</a>
-        <a href="#combined_elements">Combined Elements</a>
-        <a href="index.html">Product Listing Template</a>
-        <a href="checkout.html">Checkout Template</a>
-        <a href="#citations">Citations</a>
-      </nav>
-    </header>
-    
-    <!-- Interactive elements section -->
-    <section id="interactive_elements">
-      <h2>Interactive Elements</h2>
-
-      <!-- In-text link example -->
-      <section class="element">
-        <h3>In-text link</h3>
-        <!--In-text link example, I just wanted to learn more how I could utilize the in-text link in different way and found nav bar-->
-        <p>Student <a href="https://www.sfu.ca/">@SFU</a></p>
-
-        <!-- HTML code sample -->
-        <h4>HTML:</h4>
-        <code>
-        
-        </code>
-
-        <!-- CSS code sample -->
-        <h4>CSS:</h4>
-        <code>
-
-        </code>
+    <main>
+      <section class="style-intro">
+        <h1>STYLE GUIDE</h1>
+        <p>
+          This style guide documents the visual language, interface elements,
+          and reusable components used throughout my portfolio website.
+        </p>
       </section>
 
-      <!-- Navigation link example -->
-      <section class="element">
-        <h3>Navigation Link</h3>
-
-        <h4>CSS selector:</h4>
-        <p>.button-nav</p>
-
-        <h4>Sample code:</h4>
-        <code>&lt;a href="#" class="button"&gt;Default Button&lt;/a&gt;</code>
-
-        <h4>Rendered element:</h4>
-        <a class="button-nav" href="#">Default Button</a> <br>
+      <section class="guide-nav">
+        <a href="#interactive_elements">INTERACTIVE ELEMENTS</a>
+        <a href="#text_elements">TEXT ELEMENTS</a>
+        <a href="#combined_elements">COMBINED ELEMENTS</a>
+        <a href="#brand_components">BRAND COMPONENTS</a>
+        <a href="#citations">CITATIONS</a>
       </section>
 
-      <!-- Submit and reset button example -->
-      <section class="element">
-        <h3>Submit/Reset Buttons</h3>
-        
+      <section id="interactive_elements">
+        <h2>INTERACTIVE ELEMENTS</h2>
 
-        <!-- HTML code sample -->
-        <h4>HTML:</h4>
-        <code>
-          
-        </code>
+        <section class="element">
+          <h3>In Text Link</h3>
+          <p>
+            Visit <a class="tlink" href="https://www.sfu.ca/">@SFU</a> for more
+            information.
+          </p>
 
-        <!-- CSS code sample -->
-        <h4>CSS:</h4>
-        <code>
+          <h4>HTML</h4>
+          <code>
+            &lt;p&gt;Visit &lt;a class="tlink"
+            href="https://www.sfu.ca/"&gt;@SFU&lt;/a&gt; for more
+            information.&lt;/p&gt;
+          </code>
 
-        </code>
+          <h4>CSS</h4>
+          <code>
+            .tlink { font-family: "Simplon Mono", sans-serif; text-decoration:
+            none; color: #2323ff; } .tlink:hover { color: #000000;
+            text-decoration: underline; }
+          </code>
+        </section>
+
+        <section class="element">
+          <h3>Navigation Link</h3>
+          <nav class="demo-navbar">
+            <ul>
+              <li><a href="#">HOME</a></li>
+              <li><a href="#">PROJECTS</a></li>
+              <li><a href="#">CONTACT</a></li>
+            </ul>
+          </nav>
+
+          <h4>HTML</h4>
+          <code>
+            &lt;nav class="navbar"&gt; &lt;ul&gt; &lt;li&gt;&lt;a
+            href="#"&gt;HOME&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a
+            href="#"&gt;PROJECTS&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a
+            href="#"&gt;CONTACT&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;/nav&gt;
+          </code>
+
+          <h4>CSS</h4>
+          <code>
+            .navbar { display: flex; align-items: center; justify-content:
+            center; padding: 0.5rem 10%; } .navbar ul li { list-style-type:
+            none; display: inline-block; padding: 10px 20px; }
+          </code>
+        </section>
+
+        <section class="element">
+          <h3>Button</h3>
+          <button class="portfolio-btn">VIEW PROJECT</button>
+
+          <h4>HTML</h4>
+          <code>
+            &lt;button class="portfolio-btn"&gt;VIEW PROJECT&lt;/button&gt;
+          </code>
+
+          <h4>CSS</h4>
+          <code>
+            .portfolio-btn { padding: 9px 20px; border-radius: 50px; cursor:
+            pointer; border: 0; background-color: #f5f5f5; letter-spacing:
+            1.5px; font-size: 15px; transition: all 0.5s ease; }
+            .portfolio-btn:hover { letter-spacing: 3px; background-color:
+            #2323ff; color: #ffffff; }
+          </code>
+        </section>
+
+        <section class="element">
+          <h3>Text Input Field with Label</h3>
+          <div class="form-example">
+            <label for="name">NAME</label>
+            <input type="text" id="name" placeholder="Enter your name" />
+          </div>
+
+          <h4>HTML</h4>
+          <code>
+            &lt;label for="name"&gt;NAME&lt;/label&gt; &lt;input type="text"
+            id="name" placeholder="Enter your name" /&gt;
+          </code>
+
+          <h4>CSS</h4>
+          <code>
+            label { font-family: "NeueMontreal", sans-serif; font-weight: bold;
+            } input { width: 100%; background: transparent; border: 0;
+            border-bottom: 2px solid #000000; outline: none; }
+          </code>
+        </section>
+
+        <section class="element">
+          <h3>Radio Button with Label</h3>
+          <div class="radio-demo">
+            <label class="radio-option">
+              <input type="radio" name="role" checked />
+              <span>Designer</span>
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="role" />
+              <span>Developer</span>
+            </label>
+          </div>
+
+          <h4>HTML</h4>
+          <code>
+            &lt;label class="radio-option"&gt; &lt;input type="radio"
+            name="role" checked /&gt; &lt;span&gt;Designer&lt;/span&gt;
+            &lt;/label&gt;
+          </code>
+
+          <h4>CSS</h4>
+          <code>
+            .radio-option input[type="radio"] { display: none; } .radio-option
+            span { display: inline-flex; align-items: center; padding: 10px 20px
+            10px 10px; border-radius: 25px; }
+          </code>
+        </section>
+
+        <section class="element">
+          <h3>Image as a Link</h3>
+          <a href="#" class="image-link">
+            <img src="img/dayrow.png" alt="Project preview" />
+          </a>
+
+          <h4>HTML</h4>
+          <code>
+            &lt;a href="#" class="image-link"&gt; &lt;img src="img/dayrow.png"
+            alt="Project preview" /&gt; &lt;/a&gt;
+          </code>
+
+          <h4>CSS</h4>
+          <code>
+            .image-link img { max-width: 420px; border-radius: 18px; display:
+            block; }
+          </code>
+        </section>
       </section>
 
-      <!-- Text input field example -->
-      <section class="element">
-        <h3>Text Input Field with Label</h3>
+      <section id="text_elements">
+        <h2>TEXT ELEMENTS</h2>
 
-        <!-- HTML code sample -->
-        <h4>HTML:</h4>
-        <code>
-         
-        </code>
+        <section class="element">
+          <h3>Headings</h3>
+          <h1 class="example h1-example">Heading 1</h1>
+          <h2 class="example h2-example">Heading 2</h2>
+          <h3 class="example h3-example">Heading 3</h3>
+          <h4 class="example h4-example">Heading 4</h4>
 
-        <!-- CSS code sample -->
-        <h4>CSS:</h4>
-        <code> 
-        </code>
+          <h4>HTML</h4>
+          <code>
+            &lt;h1&gt;Heading 1&lt;/h1&gt; &lt;h2&gt;Heading 2&lt;/h2&gt;
+            &lt;h3&gt;Heading 3&lt;/h3&gt; &lt;h4&gt;Heading 4&lt;/h4&gt;
+          </code>
+
+          <h4>CSS</h4>
+          <code>
+            h1, h2, h3 { font-family: "NeueMontreal", sans-serif; } h4 {
+            font-family: "Simplon Mono", monospace; }
+          </code>
+        </section>
+
+        <section class="element">
+          <h3>Paragraphs</h3>
+          <p>
+            My portfolio focuses on interface and interaction design, with an
+            emphasis on clarity, structure, and thoughtful visual decisions.
+          </p>
+
+          <h4>HTML</h4>
+          <code>
+            &lt;p&gt;My portfolio focuses on interface and interaction design,
+            with an emphasis on clarity, structure, and thoughtful visual
+            decisions.&lt;/p&gt;
+          </code>
+
+          <h4>CSS</h4>
+          <code>
+            p { font-family: "Simplon Mono", sans-serif; line-height: 1.8;
+            color: #000000; }
+          </code>
+        </section>
+
+        <section class="element">
+          <h3>Numbered Lists</h3>
+          <ol>
+            <li>Research</li>
+            <li>Design</li>
+            <li>Prototype</li>
+          </ol>
+
+          <h4>HTML</h4>
+          <code>
+            &lt;ol&gt; &lt;li&gt;Research&lt;/li&gt; &lt;li&gt;Design&lt;/li&gt;
+            &lt;li&gt;Prototype&lt;/li&gt; &lt;/ol&gt;
+          </code>
+
+          <h4>CSS</h4>
+          <code>
+            ol { color: #000000; font-family: "Simplon Mono", sans-serif; }
+          </code>
+        </section>
       </section>
 
-      <!-- Radio button example -->
-      <section class="element">
-        <h3>Radio Button with Label</h3>
-        
+      <section id="combined_elements">
+        <h2>COMBINED ELEMENTS</h2>
 
-        <!-- HTML code sample -->
-        <h4>HTML:</h4>
-        <code>
-          
-        </code>
-        <!-- CSS code sample -->
-        <h4>CSS:</h4>
-        <code>
-         
-        </code>
+        <section class="element">
+          <h3>Main Navigation</h3>
+          <nav class="demo-navbar">
+            <ul>
+              <li><a href="#">HOME</a></li>
+              <li><a href="#">PROJECTS</a></li>
+              <li><a href="#">CONTACT</a></li>
+            </ul>
+          </nav>
+        </section>
       </section>
 
-      <!-- Image link example -->
-      <section class="element">
-        <h3>Image as a Link</h3>
-        
+      <section id="brand_components">
+        <h2>BRAND COMPONENTS</h2>
 
-        <!-- HTML code sample -->
-        <h4>HTML:</h4>
-        <code>
-         
-        </code>
+        <section class="element">
+          <h3>Fonts</h3>
+          <ul class="font-list">
+            <li class="montreal-font">NeueMontreal</li>
+            <li class="simplon-font">Simplon Mono</li>
+            <li class="givonic-font">Givonic</li>
+          </ul>
+        </section>
 
-        <!-- CSS code sample -->
-        <h4>CSS:</h4>
-        <code>
-         
-        </code>
-      </section>
-    </section>
+        <section class="element">
+          <h3>Color Palette</h3>
+          <div class="palette">
+            <div class="offwhite">#F2F0EF</div>
+            <div class="blue">#2323FF</div>
+            <div class="black">#000000</div>
+          </div>
+        </section>
 
-    <!-- Text elements section -->
-    <section id="text_elements">
-      <h2>Text Elements</h2>
-
-      <!-- Heading example -->
-      <section class="element">
-        <h3>Headings</h3>
-        <!--used a class here for h3 example so it doesnt clash with the existing css for h3-->
-        <h1 class="example">Heading 1</h1>
-        <h2 class="example">Heading 2</h2>
-        <h3 class="example">Heading 3</h3>
-        <h4 class="example">Heading 4</h4>
-
-        <!-- HTML code sample -->
-        <h4>HTML:</h4>
-        <code>
-          
-        </code>
-        <!-- CSS code sample -->
-        <h4>CSS:</h4>
-        <code>
-        </code>
+        <section class="element">
+          <h3>Imagery and Art Direction</h3>
+          <p>
+            The portfolio uses clean composition, generous spacing, minimal
+            color, and clear typography to keep attention on the work.
+          </p>
+        </section>
       </section>
 
-      <!-- Paragraph example -->
-      <section class="element">
-        <h3>Paragraphs</h3>
-        <!--Pulled this paragraph from a news article that reports the Day Row Cafe-->
-        
-
-        <!-- HTML code sample -->
-        <h4>HTML:</h4>
-        <code>
-          
-        </code>
-        <!-- CSS code sample -->
-        <h4>CSS:</h4>
-        <code>
-          
-        </code>
+      <section id="citations">
+        <h2>CITATIONS</h2>
+        <section class="element">
+          <ul>
+            <li>Referenced project assets from personal portfolio work.</li>
+          </ul>
+        </section>
       </section>
-
-      <!-- Numbered list example -->
-      <section class="element">
-        <h3>Numbered Lists</h3>
-        
-
-        <!-- HTML code sample -->
-        <h4>HTML:</h4>
-        <code>
-          
-        </code>
-        <!-- CSS code sample -->
-        <h4>CSS:</h4>
-        <code>
-
-        </code>
-
-      </section>
-    </section>
-
-    <!-- Combined elements section -->
-    <section id="combined_elements">
-      <h2>Combined Elements</h2>
-
-      <!-- Main navigation example -->
-      <section class="element">
-        <h3>Main Navigation</h3>
-        <!--Learned that it is conventional to use unordered list for navbar and I can utilize in-text link to link page from FreeCodeCamp-->
-
-        
-        <!-- HTML code sample -->
-        <h4>HTML:</h4>
-        <code>
-
-        </code>
-        <!-- CSS code sample -->
-        <h4>CSS:</h4>
-        <code>
-          
-        </code>
-      </section>
-
-      <!-- Payment form example -->
-      <section class="element">
-        <h3>Payment Form</h3>
-        <!--referred to W3School for the Checkout Form-->
-        
-
-        <!-- HTML code sample -->
-        <h4>HTML:</h4>
-        <code>
-          
-        </code>
-        <!-- CSS code sample -->
-        <h4>CSS:</h4>
-        <code>
-          
-        </code>
-      </section>
-
-      
-    
-
-    <!-- Brand components section -->
-    <section id="Brand-Components">
-      <h2>Brand Components</h2>
-
-      <!-- Font examples -->
-      <section class="element">
-        <h3>Fonts</h3>
-        <ul>
-          <li class="montreal-font">NEUE MONTREAL</li>
-          <li class="simplon-font">SIMPLON MONO</li>
-        </ul>
-
-        <!-- HTML code sample -->
-        <h4>HTML:</h4>
-
-        <!-- CSS code sample -->
-        <h4>CSS:</h4>
-      </section>
-
-      <!-- Color palette example -->
-      <section class="element">
-        <h3>Color Palette</h3>
-        <ul class="color-palette">
-          <li style="color: #f2f0ef">Off-White</li>
-          <li style="color: #1a2054">Dark Blue</li>
-          <li style="color: #000000">Black</li>
-        </ul>
-        <h4>HTML:</h4>
-        <code>
-        </code>
-      </section>
-
-      <!-- Imagery and art direction example -->
-      <section class="element">
-        <h3>Imagery and Art Direction</h3>
-        <h4>Imagery</h4>
-       
-
-        <!-- HTML code sample -->
-       
-      </section>
-    </section>
-
-    <!-- Citations section -->
-    <section id="citations">
-      <h2>Citations</h2>
-
-      <!-- Citation list -->
-      <ul>
-        <li>
-          Matteson, Steve. Designer. 2011. <strong>Open Sans [Font]</strong>.
-          Retrieved from
-          <a
-            href="https://www.google.com/fonts#QuickUsePlace:quickUse/Family:Open+Sans"
-            >https://www.google.com/fonts#QuickUsePlace:quickUse/Family:Open+Sans</a
-          >
-        </li>
-        
-      </ul>
-    </section>
-    
+    </main>
   </body>
 </html>
