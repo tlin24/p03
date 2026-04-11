@@ -26,6 +26,7 @@
         <a href="#combined_elements">COMBINED ELEMENTS</a>
         <a href="#brand_components">BRAND COMPONENTS</a>
         <a href="#citations">CITATIONS</a>
+        <a href="index.html">PORTFOLIO</a>
       </section>
 
       <section id="interactive_elements">
@@ -33,23 +34,32 @@
 
         <section class="element">
           <h3>In Text Link</h3>
-          <p>
-            Visit <a class="tlink" href="https://www.sfu.ca/">@SFU</a> for more
-            information.
-          </p>
+          <section class="contact-cont">
+            <!--LEARNED TAGET="_BLANK" FROM FREE CODE CAMP AS IT ALLOWS THE LINK TO OPEN IN A NEW TAB-->
+            <p>
+              linkedin:
+              <a
+                href="https://www.linkedin.com/in/terry-lin-54bb851bb/"
+                target="_blank"
+              >
+                @terrylin.linkedin
+              </a>
+            </p>
+          </section>
 
           <h4>HTML</h4>
           <code>
-            &lt;p&gt;Visit &lt;a class="tlink"
-            href="https://www.sfu.ca/"&gt;@SFU&lt;/a&gt; for more
-            information.&lt;/p&gt;
+            &lt;section class="contact-cont"&gt; &lt;p&gt; linkedin: &lt;a
+            href="https://www.linkedin.com/in/terry-lin-54bb851bb/"
+            target="_blank"&gt; @terrylin.linkedin &lt;/a&gt; &lt;/p&gt;
+            &lt;/section&gt;
           </code>
 
           <h4>CSS</h4>
           <code>
-            .tlink { font-family: "Simplon Mono", sans-serif; text-decoration:
-            none; color: #2323ff; } .tlink:hover { color: #000000;
-            text-decoration: underline; }
+            .contact-cont p { margin: 0 0 1rem 0; font-family: "Simplon Mono",
+            monospace; font-size: 1rem; line-height: 1.6; } .contact-cont a {
+            color: #2323ff; text-decoration: none; }
           </code>
         </section>
 
@@ -89,85 +99,97 @@
 
         <section class="element">
           <h3>Button</h3>
-          <button class="portfolio-btn">VIEW PROJECT</button>
+          <button class="btn">VIEW PROJECT</button>
 
           <h4>HTML</h4>
-          <code>
-            &lt;button class="portfolio-btn"&gt;VIEW PROJECT&lt;/button&gt;
-          </code>
+          <code> &lt;button class="btn"&gt;VIEW PROJECT&lt;/button&gt; </code>
 
           <h4>CSS</h4>
           <code>
-            
+            .btn { font-family: 'Simplon Mono', sans-serif; padding: 5px 20px;
+            border: 2px solid #2323ff; background: none; color: #2323ff;
+            border-radius: 6px; cursor: pointer; transition: transform 0.3s
+            ease, background-color 0.3s ease; background-color: #F5F5F5; }
+            .btn:hover { transform: scale(1.05); background-color: #f2f0ef; }
           </code>
         </section>
 
         <section class="element">
           <h3>Text Input Field with Label</h3>
-          <div class="form-example">
-            <label for="name">NAME</label>
-            <input type="text" id="name" placeholder="Enter your name" />
+          <div class="form-box">
+            <label for="name">NAME:</label>
+            <input type="text" id="name" placeholder="enter your name" />
+            <label for="email">EMAIL:</label>
+            <input type="text" id="email" placeholder="enter your email" />
           </div>
 
           <h4>HTML</h4>
           <code>
-            &lt;label for="name"&gt;NAME&lt;/label&gt; &lt;input type="text"
-            id="name" placeholder="Enter your name" /&gt;
+            &lt;div class="form-box"&gt; &lt;label
+            for="name"&gt;NAME:&lt;/label&gt; &lt;input type="text" id="name"
+            placeholder="enter your name" /&gt; &lt;label
+            for="email"&gt;EMAIL:&lt;/label&gt; &lt;input type="text" id="email"
+            placeholder="enter your email" /&gt; &lt;/div&gt;
           </code>
 
           <h4>CSS</h4>
           <code>
-            label { font-family: "NeueMontreal", sans-serif; font-weight: bold;
-            } input { width: 100%; background: transparent; border: 0;
-            border-bottom: 2px solid #000000; outline: none; }
+            .form-box { display: flex; flex-direction: column; gap: 1.2rem;
+            max-width: 420px; } .form-box label { font-family: "Simplon Mono",
+            monospace; font-size: 0.75rem; letter-spacing: 0.08em; color:
+            #2323ff; } .form-box input { width: 100%; padding: 0.8rem 0;
+            font-size: 1rem; font-family: "NeueMontreal", sans-serif;
+            background: transparent; border: none; border-bottom: 1px solid
+            #000000; transition: border-color 0.3s ease; outline: none; }
+            .form-box input:focus { border-bottom: 1px solid #2323ff; }
+            .form-box input::placeholder { color: #898989 }
           </code>
         </section>
 
         <section class="element">
           <h3>Radio Button with Label</h3>
-          <div class="radio-demo">
-            <label class="radio-option">
+          <div class="radio-box">
+            <label>
               <input type="radio" name="role" checked />
-              <span>Designer</span>
-            </label>
-            <label class="radio-option">
-              <input type="radio" name="role" />
               <span>Developer</span>
+            </label>
+            <label>
+              <input type="radio" name="role" />
+              <span>Designer</span>
             </label>
           </div>
 
           <h4>HTML</h4>
           <code>
-            &lt;label class="radio-option"&gt; &lt;input type="radio"
-            name="role" checked /&gt; &lt;span&gt;Designer&lt;/span&gt;
-            &lt;/label&gt;
+            &lt;div class="radio-box"&gt; &lt;label&gt; &lt;input type="radio"
+            name="role" checked /&gt; &lt;span&gt;Developer&lt;/span&gt;
+            &lt;/label&gt; &lt;label&gt; &lt;input type="radio" name="role"
+            /&gt; &lt;span&gt;Designer&lt;/span&gt; &lt;/label&gt; &lt;/div&gt;
           </code>
 
           <h4>CSS</h4>
           <code>
-            .radio-option input[type="radio"] { display: none; } .radio-option
-            span { display: inline-flex; align-items: center; padding: 10px 20px
-            10px 10px; border-radius: 25px; }
+            &lt;div class="radio-box"&gt; &lt;label&gt; &lt;input type="radio"
+            name="role" checked /&gt; &lt;span&gt;Developer&lt;/span&gt;
+            &lt;/label&gt; &lt;label&gt; &lt;input type="radio" name="role"
+            /&gt; &lt;span&gt;Designer&lt;/span&gt; &lt;/label&gt; &lt;/div&gt;
           </code>
         </section>
 
         <section class="element">
           <h3>Image as a Link</h3>
-          <a href="#" class="image-link">
-            <img src="img/dayrow.png" alt="Project preview" />
+          <a href="dutch.html" class="image-link">
+            <img src="img/dutch_index.png" alt="Project preview" />
           </a>
 
           <h4>HTML</h4>
           <code>
-            &lt;a href="#" class="image-link"&gt; &lt;img src="img/dayrow.png"
-            alt="Project preview" /&gt; &lt;/a&gt;
+            &lt;a href="dutch.html" class="image-link"&gt; &lt;img
+            src="img/dutch_index.png" alt="Project preview" /&gt; &lt;/a&gt;
           </code>
 
           <h4>CSS</h4>
-          <code>
-            .image-link img { max-width: 420px; border-radius: 18px; display:
-            block; }
-          </code>
+          <code> img { max-width: 100%; display: block; } </code>
         </section>
       </section>
 
@@ -176,42 +198,50 @@
 
         <section class="element">
           <h3>Headings</h3>
-          <h1 class="example h1-example">Heading 1</h1>
-          <h2 class="example h2-example">Heading 2</h2>
-          <h3 class="example h3-example">Heading 3</h3>
-          <h4 class="example h4-example">Heading 4</h4>
+          <h1 class="h-example">Heading 1</h1>
+          <h2 class="h-example">Heading 2</h2>
+          <h3 class="h-example">Heading 3</h3>
+          <h4 class="h-example">Heading 4</h4>
 
           <h4>HTML</h4>
           <code>
-            &lt;h1&gt;Heading 1&lt;/h1&gt; &lt;h2&gt;Heading 2&lt;/h2&gt;
-            &lt;h3&gt;Heading 3&lt;/h3&gt; &lt;h4&gt;Heading 4&lt;/h4&gt;
+            &lt;h1 class="h-example"&gt;Heading 1&lt;/h1&gt; &lt;h2
+            class="h-example"&gt;Heading 2&lt;/h2&gt; &lt;h3
+            class="h-example"&gt;Heading 3&lt;/h3&gt; &lt;h4
+            class="h-example"&gt;Heading 4&lt;/h4&gt;
           </code>
 
           <h4>CSS</h4>
           <code>
-            h1, h2, h3 { font-family: "NeueMontreal", sans-serif; } h4 {
-            font-family: "Simplon Mono", monospace; }
+            .h-example { font-family: "Neue Montreal", sans-serif; color:
+            #2323ff; }
           </code>
         </section>
 
         <section class="element">
           <h3>Paragraphs</h3>
-          <p>
-            My portfolio focuses on interface and interaction design, with an
-            emphasis on clarity, structure, and thoughtful visual decisions.
+          <p class="p-example">
+            My name is Terry Lin, a <strong class="highlight">UX/UI</strong> and
+            <strong class="highlight">product designer</strong> specializing in
+            interface and interaction design. I am drawn to the moment where
+            people meet technology and how small design decisions shape emotion,
+            clarity, and engagement.
           </p>
 
           <h4>HTML</h4>
           <code>
-            &lt;p&gt;My portfolio focuses on interface and interaction design,
-            with an emphasis on clarity, structure, and thoughtful visual
-            decisions.&lt;/p&gt;
+            &lt;p&gt;My name is Terry Lin, a &lt;strong
+            class="highlight"&gt;UX/UI&lt;/strong&gt; and &lt;strong
+            class="highlight"&gt;product designer&lt;/strong&gt; specializing in
+            interface and interaction design. I am drawn to the moment where
+            people meet technology and how small design decisions shape emotion,
+            clarity, and engagement.&lt;/p&gt;
           </code>
 
           <h4>CSS</h4>
           <code>
-            p { font-family: "Simplon Mono", sans-serif; line-height: 1.8;
-            color: #000000; }
+            p { font-family: "Simplon Mono", sans-serif; padding-left: 4rem; }
+            .highlight { color: #2323ff; }
           </code>
         </section>
 
@@ -231,7 +261,7 @@
 
           <h4>CSS</h4>
           <code>
-            ol { color: #000000; font-family: "Simplon Mono", sans-serif; }
+            ol { color: #2323ff; font-family: "Simplon Mono", sans-serif; }
           </code>
         </section>
       </section>
@@ -241,13 +271,36 @@
 
         <section class="element">
           <h3>Main Navigation</h3>
-          <nav class="demo-navbar">
+          <nav class="navbar">
             <ul>
               <li><a href="#">HOME</a></li>
               <li><a href="#">PROJECTS</a></li>
               <li><a href="#">CONTACT</a></li>
             </ul>
           </nav>
+
+          <h4>HTML</h4>
+          <code>
+            &lt;nav class="navbar"&gt; &lt;ul&gt; &lt;li&gt;&lt;a
+            href="#"&gt;HOME&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a
+            href="#"&gt;PROJECTS&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a
+            href="#"&gt;CONTACT&lt;/a&gt;&lt;/li&gt; &lt;/ul&gt; &lt;/nav&gt;
+          </code>
+
+          <h4>CSS</h4>
+          <code>
+            .navbar { display: flex; align-items: center; justify-content:
+            center; padding: 0.5rem 10%; } .navbar ul li { list-style-type:
+            none; display: inline-block; padding: 10px 20px; } .navbar ul li a {
+            position: relative; color: #000000; font-family: "NeueMontreal",
+            sans-serif; font-weight: bold; text-decoration: none; font-size:
+            1rem; letter-spacing: 0.1em; } .navbar ul li a::after { content: "";
+            position: absolute; left: 0; bottom: -4px; width: 100%; height: 2px;
+            background-color: #2323ff; transform: scaleX(0); transform-origin:
+            left; transition: transform 0.5s ease; } .navbar ul li a:hover {
+            color: #2323ff; } .navbar ul li a:hover::after { transform:
+            scaleX(1); }
+          </code>
         </section>
       </section>
 
@@ -261,23 +314,67 @@
             <li class="simplon-font">Simplon Mono</li>
             <li class="givonic-font">Givonic</li>
           </ul>
+
+          <h4>HTML</h4>
+          <code>
+            &lt;ul class="font-list"&gt; &lt;li
+            class="montreal-font"&gt;NeueMontreal&lt;/li&gt; &lt;li
+            class="simplon-font"&gt;Simplon Mono&lt;/li&gt; &lt;li
+            class="givonic-font"&gt;Givonic&lt;/li&gt; &lt;/ul&gt;
+          </code>
+
+          <h4>CSS</h4>
+          <code>
+            .montreal-font { font-family: "NeueMontreal", sans-serif; }
+            .simplon-font { font-family: "Simplon Mono", monospace; }
+            .givonic-font { font-family: "Givonic", sans-serif; }
+          </code>
         </section>
 
         <section class="element">
           <h3>Color Palette</h3>
           <div class="palette">
-            <div class="offwhite">#F2F0EF</div>
+            <div class="offwhite">#F5F5F5</div>
             <div class="blue">#2323FF</div>
             <div class="black">#000000</div>
           </div>
+
+          <h4>HTML</h4>
+          <code>
+            &lt;div class="palette"&gt; &lt;div
+            class="offwhite"&gt;#F5F5F5&lt;/div&gt; &lt;div
+            class="blue"&gt;#2323FF&lt;/div&gt; &lt;div
+            class="black"&gt;#000000&lt;/div&gt; &lt;/div&gt;
+          </code>
+
+          <h4>CSS</h4>
+          <code>
+            .offwhite { color: #F5F5F5; background-color: #2323ff; } .blue {
+            color: #2323ff; } .black { color: #000000; }
+          </code>
         </section>
 
         <section class="element">
           <h3>Imagery and Art Direction</h3>
+          <img src="img/portfolio.png" />
+          <img src="img/portfolio_content.png" />
           <p>
             The portfolio uses clean composition, generous spacing, minimal
             color, and clear typography to keep attention on the work.
           </p>
+
+          <h4>HTML</h4>
+          <code
+            >&lt;img src="img/portfolio.png" /&gt; &lt;img
+            src="img/portfolio_content.png" /&gt; &lt;p&gt; The portfolio uses
+            clean composition, generous spacing, minimal color, and clear
+            typography to keep attention on the work. &lt;/p&gt;
+          </code>
+
+          <h4>CSS</h4>
+          <code
+            >img { max-width: 100%; display: block; } p { font-family: "Simplon
+            Mono", sans-serif; padding-left: 4rem; }</code>
         </section>
       </section>
 
@@ -285,7 +382,8 @@
         <h2>CITATIONS</h2>
         <section class="element">
           <ul>
-            <li>Referenced project assets from personal portfolio work.</li>
+            <li>Referenced project assets from personal portfolio work by Terry Lin.</li>
+            <li></li>
           </ul>
         </section>
       </section>

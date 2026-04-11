@@ -26,6 +26,22 @@ code {
   background-color: #EEE;
 }
 
+.contact-cont p {
+  margin: 0 0 1rem 0;
+  font-family: "Simplon Mono", monospace;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.contact-cont a {
+  color: #2323ff;
+  text-decoration: none;
+}
+
+.highlight {
+  color: #2323ff;
+}
+
 .navbar {
   display: flex;
   align-items: center;
@@ -68,4 +84,141 @@ code {
 
 .navbar ul li a:hover::after {
   transform: scaleX(1);
+}
+
+.btn {
+  font-family: 'Simplon Mono', sans-serif;
+  padding: 5px 20px;
+  border: 2px solid #2323ff;
+  background: none;
+  color: #2323ff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  background-color: #F5F5F5;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  background-color: #f2f0ef;
+}
+
+/*input field*/
+.form-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  max-width: 420px;
+}
+
+.form-box label {
+  font-family: "Simplon Mono", monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: #2323ff;
+}
+
+.form-box input {
+  width: 100%;
+  padding: 0.8rem 0;
+  font-size: 1rem;
+  font-family: "NeueMontreal", sans-serif;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #000000;
+  transition: border-color 0.3s ease;
+  outline: none;
+}
+
+.form-box input:focus {
+  border-bottom: 1px solid #2323ff;
+}
+
+.form-box input::placeholder {
+  color: #898989
+}
+
+.radio-box {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.radio-box input[type="radio"] {
+  display: none;
+}
+
+.radio-box label {
+  cursor: pointer;
+}
+
+.radio-box span {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1.2rem;
+  border-radius: 999px;
+
+  font-family: "Simplon Mono", monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  color: #000;
+
+  transition: all 0.25s ease;
+}
+
+.radio-box span:hover {
+  border-color: #2323ff;
+  color: #2323ff;
+}
+
+.radio-box input[type="radio"]:checked + span {
+  border-color: #2323ff;
+  color: #2323ff;
+}
+
+.h-example {
+  font-family: "Neue Montreal", sans-serif;
+  color: #2323ff;
+}
+
+/*paragraph*/
+.p-example {
+  font-family: "Simplon Mono", sans-serif;
+  padding-left: 4rem;
+}
+
+.highlight {
+  color: #2323ff;
+}
+
+.montreal-font {
+  font-family: "NeueMontreal",sans-serif;
+}
+
+.simplon-font {
+  font-family: "Simplon Mono",monospace;
+}
+
+.givonic-font {
+  font-family: "Givonic",sans-serif;
+}
+
+.offwhite {
+  color: #F5F5F5;
+  background-color: #2323ff;
+}
+
+.blue {
+  color:#2323ff;
+}
+
+.black {
+  color: #000000;
+}
+
+ol { 
+  color: #2323ff; 
+  font-family: "Simplon Mono", sans-serif; 
 }

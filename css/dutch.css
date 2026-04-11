@@ -82,6 +82,7 @@ body {
 
 main {
   padding-top: 200px; 
+  background-color: #f5f5f5;
 }
 
 .proj-intro h1 {
@@ -96,7 +97,7 @@ main {
 
 body {
   margin: 0;
-  background-color: #f2f0ef;
+  background-color: #f5f5f5;
   color: #000000;
   font-family: "NeueMontreal", sans-serif;
 }
@@ -342,7 +343,7 @@ img {
 .approach-img img {
   width: 100%;
   height: auto;
-  object-fit: contain; 
+  object-fit: cover; 
   border-radius: 1.5rem;
   display: block;
   border: 1px solid #000000;
