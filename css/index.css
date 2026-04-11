@@ -158,7 +158,8 @@ main {
   border: 1px solid black;
   border-radius: 20px;
 
-  height: 75px;
+  height: auto;
+  max-height: 75px;
   overflow: hidden;
 
   transition: all 0.4s ease;
@@ -192,7 +193,6 @@ main {
   color: #8f8f8f;
 }
 
-/* RIGHT CONTENT */
 .project-info {
   display: flex;
   flex-direction: column;
