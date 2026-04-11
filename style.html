@@ -11,7 +11,6 @@
   </head>
 
   <body>
-
     <main>
       <section class="style-intro">
         <h1>STYLE GUIDE</h1>
@@ -56,7 +55,7 @@
 
         <section class="element">
           <h3>Navigation Link</h3>
-          <nav class="demo-navbar">
+          <nav class="navbar">
             <ul>
               <li><a href="#">HOME</a></li>
               <li><a href="#">PROJECTS</a></li>
@@ -76,7 +75,15 @@
           <code>
             .navbar { display: flex; align-items: center; justify-content:
             center; padding: 0.5rem 10%; } .navbar ul li { list-style-type:
-            none; display: inline-block; padding: 10px 20px; }
+            none; display: inline-block; padding: 10px 20px; } .navbar ul li a {
+            position: relative; color: #000000; font-family: "NeueMontreal",
+            sans-serif; font-weight: bold; text-decoration: none; font-size:
+            1rem; letter-spacing: 0.1em; } .navbar ul li a::after { content: "";
+            position: absolute; left: 0; bottom: -4px; width: 100%; height: 2px;
+            background-color: #2323ff; transform: scaleX(0); transform-origin:
+            left; transition: transform 0.5s ease; } .navbar ul li a:hover {
+            color: #2323ff; } .navbar ul li a:hover::after { transform:
+            scaleX(1); }
           </code>
         </section>
 
@@ -91,11 +98,7 @@
 
           <h4>CSS</h4>
           <code>
-            .portfolio-btn { padding: 9px 20px; border-radius: 50px; cursor:
-            pointer; border: 0; background-color: #f5f5f5; letter-spacing:
-            1.5px; font-size: 15px; transition: all 0.5s ease; }
-            .portfolio-btn:hover { letter-spacing: 3px; background-color:
-            #2323ff; color: #ffffff; }
+            
           </code>
         </section>
 

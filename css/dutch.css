@@ -125,7 +125,7 @@ img {
   align-items: start;
   gap: 2rem;
   padding-top: 6rem;
-  border-bottom: 1px solid rgba(0, 58, 107, 0.15);
+  border-bottom: 1px solid #000000;
   padding-bottom: 4rem;
 }
 
@@ -249,7 +249,7 @@ img {
 
 .problem-images {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   margin-top: 3.5rem;
   margin-bottom: 3rem;
@@ -260,8 +260,8 @@ img {
   aspect-ratio: 4 / 3;
   object-fit: cover;
   border-radius: 1.5rem;
-  background-color: #ebe8e6;
-  box-shadow: 0 0 0 1px rgba(0, 58, 107, 0.08);
+  background: none;
+  border: 1px solid #000000;
 }
 
 .problem-cards {
@@ -333,15 +333,19 @@ img {
 }
 
 .approach-img {
-  margin-top: 3rem;
+  margin: 3rem auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .approach-img img {
   width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain; 
   border-radius: 1.5rem;
-  box-shadow: 0 0 0 1px rgba(0, 58, 107, 0.08);
+  display: block;
+  border: 1px solid #000000;
 }
 
 .approach-cards {
@@ -354,7 +358,7 @@ img {
 .reflection-section {
   margin-top: 10rem;
   padding-top: 5rem;
-  border-top: 1px solid rgba(0, 58, 107, 0.15);
+  border-top: 1px solid #000000;
 }
 
 .reflection-section h1 {

@@ -125,7 +125,7 @@ img {
   align-items: start;
   gap: 2rem;
   padding-top: 6rem;
-  border-bottom: 1px solid rgba(0, 58, 107, 0.15);
+  border-bottom: 1px solid #000000;
   padding-bottom: 4rem;
 }
 
@@ -261,7 +261,7 @@ img {
   object-fit: cover;
   border-radius: 1.5rem;
   background-color: #ebe8e6;
-  box-shadow: 0 0 0 1px rgba(0, 58, 107, 0.08);
+  border: 1px solid #000000;
 }
 
 .problem-cards {
@@ -341,7 +341,7 @@ img {
   aspect-ratio: 4 / 3;
   object-fit: cover;
   border-radius: 1.5rem;
-  box-shadow: 0 0 0 1px rgba(0, 58, 107, 0.08);
+  border: 1px solid #000000;
 }
 
 .approach-cards {
@@ -354,7 +354,7 @@ img {
 .reflection-section {
   margin-top: 10rem;
   padding-top: 5rem;
-  border-top: 1px solid rgba(0, 58, 107, 0.15);
+  border-top: 1px solid #000000;
 }
 
 .reflection-section h1 {
